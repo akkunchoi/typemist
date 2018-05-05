@@ -4,3 +4,6 @@ TODO
 - `@Long("argument")`
 - `@Rest`
 - `@Parameters`
+- test
+- typed
+- format help
