@@ -1,16 +1,16 @@
 import minimist = require("minimist");
-import { Opt } from "./Opt";
+import { BaseArg } from "./BaseArg";
 
 export { Option } from "./decorators";
 export { Parameter } from "./decorators";
 export { Description } from "./decorators";
-export { Opt };
+export { BaseArg };
 
 interface Newable<T> {
   new (...args: any[]): T;
 }
 
-export function typemist<T extends Opt>(argv: any, klass: Newable<T>): T {
+export function typemist<T extends BaseArg>(argv: any, klass: Newable<T>): T {
 
   const {_, ...options} = minimist(argv);
 

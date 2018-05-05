@@ -1,6 +1,6 @@
-import { typemist, Option, Opt, Parameter, Description } from "./index";
+import { typemist, Option, BaseArg, Parameter, Description } from "./index";
 
-class SampleRunOption extends Opt {
+class SampleRunOption extends BaseArg {
 
   @Description("a year")
   @Option
@@ -38,4 +38,5 @@ if (opt.help) {
 }
 
 process.exit();
+
 

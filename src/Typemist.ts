@@ -1,5 +1,5 @@
 import { manager } from "./manager";
-import { Opt } from "./Opt";
+import { BaseArg } from "./BaseArg";
 
 export class Typemist {
 
@@ -23,24 +23,24 @@ export class Typemist {
   }
 
 
-  getStoredOptions<T extends Opt>(obj: T) {
+  getStoredOptions<T extends BaseArg>(obj: T) {
     return manager.options.filter((p) => {
       return obj instanceof p.target.constructor;
     });
   }
 
-  getStoredParameters<T extends Opt>(obj: T) {
+  getStoredParameters<T extends BaseArg>(obj: T) {
     return manager.parameters.filter((p) => {
       return obj instanceof p.target.constructor;
     });
   }
 
-  getStoredDescriptions<T extends Opt>(obj: T) {
+  getStoredDescriptions<T extends BaseArg>(obj: T) {
     return manager.descriptions.filter((p) => {
       return obj instanceof p.target.constructor;
     });
   }
-  getStoredDescription<T extends Opt>(obj: T, key: string): string {
+  getStoredDescription<T extends BaseArg>(obj: T, key: string): string {
     const desc = manager.descriptions.find((p) => {
       return obj instanceof p.target.constructor && p.propertyName === key;
     });

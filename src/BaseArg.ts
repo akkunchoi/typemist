@@ -1,6 +1,6 @@
 import { manager } from "./manager";
 
-export abstract class Opt {
+export abstract class BaseArg {
 
   constructor(args: any[], options: any) {
 
