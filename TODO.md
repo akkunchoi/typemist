@@ -1,5 +1,7 @@
 TODO
 
+## milestone 1
+
 - `@Short("a")`
 - `@Long("argument")`
 - `@Rest`
@@ -7,3 +9,8 @@ TODO
 - test
 - typed
 - format help
+
+## milestone 2
+
+- validation
+- `@Required`
