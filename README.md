@@ -12,6 +12,7 @@ See src/sample.ts
 
 ## Requirement
 
+in tsconfig.json
 ```
 {
     "compilerOptions": {
